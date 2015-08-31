@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B8370F1E1B934B84005B9C07 /* SwiftTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = B8370F1D1B934B84005B9C07 /* SwiftTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8370F261B934B98005B9C07 /* SwiftAssert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8370F251B934B98005B9C07 /* SwiftAssert.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8370F1A1B934B84005B9C07 /* SwiftTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8370F1D1B934B84005B9C07 /* SwiftTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftTesting.h; sourceTree = "<group>"; };
 		B8370F1F1B934B84005B9C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8370F251B934B98005B9C07 /* SwiftAssert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAssert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +48,9 @@
 		B8370F1C1B934B84005B9C07 /* SwiftTesting */ = {
 			isa = PBXGroup;
 			children = (
-				B8370F1D1B934B84005B9C07 /* SwiftTesting.h */,
 				B8370F1F1B934B84005B9C07 /* Info.plist */,
+				B8370F1D1B934B84005B9C07 /* SwiftTesting.h */,
+				B8370F251B934B98005B9C07 /* SwiftAssert.swift */,
 			);
 			path = SwiftTesting;
 			sourceTree = "<group>";
@@ -90,6 +93,7 @@
 		B8370F111B934B84005B9C07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jernej Strasner";
 				TargetAttributes = {
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8370F261B934B98005B9C07 /* SwiftAssert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,28 +233,37 @@
 		B8370F231B934B84005B9C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = SwiftTesting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jernejstrasner.SwiftTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B8370F241B934B84005B9C07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				INFOPLIST_FILE = SwiftTesting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jernejstrasner.SwiftTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +290,7 @@
 				B8370F241B934B84005B9C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,7 +13,3 @@ FOUNDATION_EXPORT double SwiftTestingVersionNumber;
 
 //! Project version string for SwiftTesting.
 FOUNDATION_EXPORT const unsigned char SwiftTestingVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <SwiftTesting/PublicHeader.h>
-
-
